@@ -46,7 +46,7 @@
     return `
       <div class="tabs">
         <button class="tab-bottone attivo" data-tab="convocazioni">Convocazioni</button>
-        <button class="tab-bottone" data-tab="attrezzature">Apparecchiature</button>
+        <button class="tab-bottone" data-tab="attrezzature">Attrezzature</button>
       </div>
       <div class="tab-contenuto attivo" id="tab-convocazioni"></div>
       <div class="tab-contenuto" id="tab-attrezzature"></div>
@@ -179,8 +179,8 @@
     const contenitore = document.getElementById('tab-attrezzature');
     contenitore.innerHTML = `
       <div class="card">
-        <h3>Apparecchiature assegnate</h3>
-        ${attrezzatureAssegnate.length === 0 ? '<div class="stato-vuoto">Nessuna apparecchiatura assegnata</div>' : `
+        <h3>Attrezzature assegnate</h3>
+        ${attrezzatureAssegnate.length === 0 ? '<div class="stato-vuoto">Nessuna attrezzatura assegnata</div>' : `
           <div class="tabella-scroll">
             <table>
               <thead><tr><th>Nome</th><th>Tipo</th><th>Numero serie</th><th>Assegnata il</th><th>Restituita il</th><th></th></tr></thead>
@@ -202,7 +202,7 @@
         ${puoGestire ? `
           <div class="barra-azioni" style="margin-top:1rem;">
             <div class="gruppo-filtri">
-              <select id="seleziona-attrezzatura" style="min-width:260px;"><option value="">Caricamento apparecchiature disponibili...</option></select>
+              <select id="seleziona-attrezzatura" style="min-width:260px;"><option value="">Caricamento attrezzature disponibili...</option></select>
               <button class="bottone-primario" id="bottone-assegna-attrezzatura">Assegna alla gara</button>
             </div>
           </div>
@@ -226,7 +226,7 @@
         const select = document.getElementById('seleziona-attrezzatura');
         select.innerHTML = disponibiliResp.attrezzature.length
           ? disponibiliResp.attrezzature.map((a) => `<option value="${a.id}">${Layout.escapeHtml(a.nome)} (${Layout.escapeHtml(a.numero_serie || 'n/d')})</option>`).join('')
-          : '<option value="">Nessuna apparecchiatura disponibile</option>';
+          : '<option value="">Nessuna attrezzatura disponibile</option>';
       } catch (errore) { /* ignora */ }
 
       document.getElementById('bottone-assegna-attrezzatura').addEventListener('click', async () => {

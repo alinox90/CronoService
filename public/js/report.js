@@ -36,7 +36,7 @@
     contenuto.innerHTML = `
       ${grafico('Numero di servizi per cronometrista', serviziEtichettati, 'nomeCompleto', 'numero_servizi')}
       ${grafico(`Ore di servizio stimate (${ore.durataMediaOrePerServizio} ore/servizio)`, oreEtichettate, 'nomeCompleto', 'ore_stimate', ' h')}
-      ${grafico('Utilizzo delle apparecchiature', attrezzature.utilizzoAttrezzature, 'nome', 'numero_utilizzi')}
+      ${grafico('Utilizzo delle attrezzature', attrezzature.utilizzoAttrezzature, 'nome', 'numero_utilizzi')}
     `;
   } catch (errore) {
     Util.mostraErrore(contenuto, errore);
