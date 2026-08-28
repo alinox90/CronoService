@@ -60,7 +60,7 @@
       document.getElementById('modulo-attrezzatura').addEventListener('submit', salva);
     }
   }
-
+/* commento */
   function apriModale(a) {
     document.getElementById('errore-modale').innerHTML = '';
     document.getElementById('titolo-modale').textContent = a ? 'Modifica attrezzatura' : 'Nuova attrezzatura';
