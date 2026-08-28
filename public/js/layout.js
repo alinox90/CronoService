@@ -8,7 +8,7 @@ const Layout = (() => {
     { chiave: 'convocazioni', href: '/pages/convocazioni.html', icona: '📋', etichetta: 'Convocazioni', ruoli: null },
     { chiave: 'utenti', href: '/pages/utenti.html', icona: '👥', etichetta: 'Cronometristi', ruoli: ['admin', 'presidente', 'designatore'] },
     { chiave: 'disponibilita', href: '/pages/disponibilita.html', icona: '🗓️', etichetta: 'Disponibilità', ruoli: null },
-    { chiave: 'attrezzature', href: '/pages/attrezzature.html', icona: '🧰', etichetta: 'Attrezzature', ruoli: null },
+    { chiave: 'attrezzature', href: '/pages/attrezzature.html', icona: '🧰', etichetta: 'Apparecchiature', ruoli: null },
     { chiave: 'report', href: '/pages/report.html', icona: '📊', etichetta: 'Report', ruoli: ['admin', 'presidente', 'designatore'] },
     { chiave: 'amministrazione', href: '/pages/amministrazione.html', icona: '⚙️', etichetta: 'Amministrazione', ruoli: ['admin'] },
     { chiave: 'profilo', href: '/pages/profilo.html', icona: '👤', etichetta: 'Profilo', ruoli: null }

@@ -42,7 +42,7 @@ async function renderDashboardAmministrativa(contenuto) {
       <div class="riquadro-statistica"><div class="valore">${gare.pianificate}</div><div class="etichetta">Gare pianificate</div></div>
       <div class="riquadro-statistica"><div class="valore">${cronometristiAttivi}</div><div class="etichetta">Cronometristi attivi</div></div>
       <div class="riquadro-statistica"><div class="valore">${convocazioniDaConfermare}</div><div class="etichetta">Convocazioni da confermare</div></div>
-      <div class="riquadro-statistica"><div class="valore">${attrezzatureDisponibili}</div><div class="etichetta">Attrezzature disponibili</div></div>
+      <div class="riquadro-statistica"><div class="valore">${attrezzatureDisponibili}</div><div class="etichetta">Apparecchiature disponibili</div></div>
     </div>
 
     <div class="card">

@@ -1,6 +1,6 @@
 // Pagina "Attrezzature": inventario completo, gestione riservata a admin/designatore
 (async () => {
-  const utente = await Layout.init('attrezzature', 'Attrezzature');
+  const utente = await Layout.init('attrezzature', 'Apparecchiature');
   if (!utente) return;
   const contenuto = Layout.contenitore();
   const puoGestire = ['admin', 'designatore'].includes(utente.ruolo);
@@ -19,14 +19,14 @@
             <option value="fuori_servizio">Fuori servizio</option>
           </select>
         </div>
-        ${puoGestire ? '<button class="bottone-accento" id="bottone-nuova">+ Nuova attrezzatura</button>' : ''}
+        ${puoGestire ? '<button class="bottone-accento" id="bottone-nuova">+ Nuova apparecchiatura</button>' : ''}
       </div>
       <div class="card"><div class="tabella-scroll" id="contenitore-tabella"></div></div>
 
       <div class="overlay-modale" id="overlay-modale">
         <div class="modale">
           <div class="intestazione-modale">
-            <h2 id="titolo-modale">Nuova attrezzatura</h2>
+            <h2 id="titolo-modale">Nuova apparecchiatura</h2>
             <button id="chiudi-modale">&times;</button>
           </div>
           <div id="errore-modale"></div>
@@ -63,7 +63,7 @@
 
   function apriModale(a) {
     document.getElementById('errore-modale').innerHTML = '';
-    document.getElementById('titolo-modale').textContent = a ? 'Modifica attrezzatura' : 'Nuova attrezzatura';
+    document.getElementById('titolo-modale').textContent = a ? 'Modifica apparecchiatura' : 'Nuova apparecchiatura';
     document.getElementById('attr-id').value = a ? a.id : '';
     document.getElementById('attr-nome').value = a ? a.nome : '';
     document.getElementById('attr-tipo').value = a ? (a.tipo || '') : '';
@@ -96,7 +96,7 @@
   }
 
   async function elimina(id) {
-    if (!confirm('Eliminare questa attrezzatura?')) return;
+    if (!confirm('Eliminare questa apparecchiatura?')) return;
     try {
       await api.delete(`/attrezzature/${id}`);
       await carica();
@@ -121,7 +121,7 @@
   function renderTabella() {
     const contenitoreTabella = document.getElementById('contenitore-tabella');
     if (attrezzature.length === 0) {
-      contenitoreTabella.innerHTML = '<div class="stato-vuoto">Nessuna attrezzatura trovata</div>';
+      contenitoreTabella.innerHTML = '<div class="stato-vuoto">Nessuna apparecchiatura trovata</div>';
       return;
     }
     contenitoreTabella.innerHTML = `
