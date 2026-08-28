@@ -11,3 +11,5 @@ services:
         generateValue: true
       - key: DB_PATH
         value: ./data/crono-service.db
+      - key: NODE_VERSION
+        value: 20.18.1
