@@ -46,7 +46,7 @@ async function renderDashboardAmministrativa(contenuto) {
     </div>
 
     <div class="card">
-      <h2>Prossime gare</h2>
+      <h2>Elenco gare</h2>
       ${prossimeGare.length === 0 ? '<div class="stato-vuoto">Nessuna gara in programma</div>' : `
         <div class="tabella-scroll">
           <table>
