@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: crono-service
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install
+    startCommand: npm run seed && npm start
+    envVars:
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: ./data/crono-service.db
